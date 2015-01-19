@@ -3,9 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <title>@ViewBag.Title</title>
+
+    @Styles.Render("~/StyleBundles/bootstrap-core")
+    @Styles.Render("~/StyleBundles/site-core-less")
+
+    @RenderSection("header", false)
 
 </head>
 <body>
@@ -41,8 +44,8 @@
 
    
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/ScriptBundles/jquery-core")
+    @Scripts.Render("~/ScriptBundles/bootstrap-core")
     @RenderSection("scripts", required: false)
 </body>
 </html>
