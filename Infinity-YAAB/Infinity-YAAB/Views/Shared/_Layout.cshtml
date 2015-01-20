@@ -19,7 +19,7 @@
                 <!-- Header Row Goes Here-->
             </header>
         </div>
-        <div class="col-md-12 faction-section">
+        <div class="col-md-12 faction-section bevel">
             <!-- Faction Selector -->
             <div class="row">
                 <div class="col-md-2">
@@ -35,7 +35,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-12">
+        <div class="col-md-12 workbench">
             <!-- Main Section-->
             @RenderBody()
         </div>
@@ -46,6 +46,7 @@
 
     @Scripts.Render("~/ScriptBundles/jquery-core")
     @Scripts.Render("~/ScriptBundles/bootstrap-core")
+    @Scripts.Render("~/ScriptBundles/InfinityFrontEnd")
     @RenderSection("scripts", required: false)
 </body>
 </html>
