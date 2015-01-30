@@ -15,7 +15,7 @@
     <AssemblyName>Infinity-YAAB</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -149,6 +149,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Repositories\Abstract\IUnitDataRepository.cs" />
+    <Compile Include="Models\Repositories\Concrete\SQL Server\BaseSQLServerRepository.cs" />
+    <Compile Include="Models\Repositories\Concrete\SQL Server\SQLServerUnitDataRepository.cs" />
+    <Compile Include="Models\Repositories\Concrete\SQL Server\Util\SqlNullValueException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -204,6 +208,7 @@
     </Content>
     <Content Include="Config\ConnectionStrings.config">
       <TransformOnBuild>true</TransformOnBuild>
+      <SubType>Designer</SubType>
     </Content>
     <None Include="Config\AppSettings.Debug.config">
       <DependentUpon>AppSettings.config</DependentUpon>
@@ -268,8 +273,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\Domain\" />
-    <Folder Include="Models\Repositories\Abstract\" />
-    <Folder Include="Models\Repositories\Concrete\" />
+    <Folder Include="Util\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -298,7 +302,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>57170</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:57170/</IISUrl>
+          <IISUrl>http://localhost:81/Infinity-YAAB</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
